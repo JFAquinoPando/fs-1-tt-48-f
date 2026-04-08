@@ -31,3 +31,17 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      
+      # (Opcional pero recomendado) Configurar la versión de Node.js
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24' # Puedes cambiar esto a la versión que utilices (ej. 18 o 22)
+
+      # Ejecuta npm i para instalar las dependencias
+      - name: Instalar dependencias
+        run: npm i
+
+      # Ejecuta npm run build para compilar el proyecto Vite + React
+      - name: Construir el proyecto
+        run: npm run build
