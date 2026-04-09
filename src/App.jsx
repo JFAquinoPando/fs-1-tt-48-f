@@ -10,7 +10,7 @@ function App() {
     const fetchCharacters = async () => {
       try {
         setLoading(true)
-        const response = await fetch('http://localhost:5000/api/characters')
+        const response = await fetch('/api/characters')
         if (!response.ok) throw new Error('Failed to fetch')
         const data = await response.json()
         setCharacters(data.items || [])
