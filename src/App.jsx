@@ -10,7 +10,7 @@ function App() {
     const fetchCharacters = async () => {
       try {
         setLoading(true)
-        const response = await fetch('https://dragonball-api.com/api/characters?limit=100')
+        const response = await fetch('http://localhost:5000/api/characters')
         if (!response.ok) throw new Error('Failed to fetch')
         const data = await response.json()
         setCharacters(data.items || [])
