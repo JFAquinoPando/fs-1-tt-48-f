@@ -26,7 +26,9 @@ function App() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-orange-900 to-yellow-900 p-8">
       <div className="max-w-7xl mx-auto">
-        <h1 className="text-5xl font-bold text-white text-center mb-4">Dragon Ball Characters</h1>
+        <div className='text-center'>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/2/22/Dragon_Ball_Super.png" alt="" />
+        </div>
         <p className="text-center text-yellow-100 mb-8 text-lg">Descubre todos los personajes del universo Dragon Ball</p>
         
         {loading && (
@@ -48,7 +50,7 @@ function App() {
                 <img 
                   src={character.image} 
                   alt={character.name} 
-                  className="w-full h-64 object-cover"
+                  className="w-full h-64 object-scale-down"
                 />
                 <div className="p-4">
                   <h2 className="text-xl font-bold text-yellow-300 mb-2">{character.name}</h2>
